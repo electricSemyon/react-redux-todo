@@ -18,6 +18,8 @@ const reducer = (store = initialState, action) => {
         ...store,
         notes: store.notes.filter(el => el.id !== action.payload.id)
       };
+    default:
+      return store;
   }
 }
 
