@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+* {
+  font-family: 'PT Sans', sans-serif;
+}
+
+body {
+  margin: 1%;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 5px;
+  margin-left: 0px;
+  color: #507299;
+}
+
+br {
+   display: block;
+   margin: 3px 0;
+   content: " ";
+}
+
+img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+p {
+  margin: 0;
+  margin-top: 3px;
+}
+
+.inputText {
+  width: 98%;
+}
+
+.hash {
+  font-size: 10px;
+  color: #cacaca;
+}
+
+.container {
+ //-moz-column-width: 13em;
+ //-webkit-column-width: 13em;
+ //-moz-column-gap: 1em;
+ //-webkit-column-gap: 1em; 
+
+  width: 100%;
+  text-align: center;
+}
+
+.noteCreator input[type=button] {
+  display: block;
+}
+
+.note {
+  position: relative;
+  display: inline-block;
+  margin: 3px;
+  padding: 10px;
+  padding-right: 30px;
+  overflow: hidden;
+  box-shadow: 2px 2px 7px #777;
+  border-radius: 2px;
+  border-right: 2px solid #507299;
+  //max-width: 350px;
+  width: 80%;
+  text-align: left;
+}
+
+.options {
+  position: absolute;
+  max-width: 50px;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: rgba(80,114,153,0.2);
+  color: #fff;
+}
+
+.options input {
+  display: block;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.options input[type=button] {
+  background-color: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,0);
+}
+
+.options input[type=button]:hover {
+  background-color: rgba(1,1,1,.05);
+  border-color: rgba(0,0,0,0);
+}
