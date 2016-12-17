@@ -10,8 +10,11 @@ class NoteCreator extends Component {
   }
   render() {
     return (<div className="noteCreator">
-      <textarea className="inputText" onChange={this.updateText.bind(this)}/>
-      <input value="Add" type="button" onClick={() => this.props.onClick(this.state.text)}/>
+      <textarea ref="textInput" className="inputText" onChange={this.updateText.bind(this)}/>
+      <input value="Add" type="button" onClick={() => {
+        this.props.onClick(this.state.text);
+        this.refs.textInput.value = '';
+      }}/>
     </div>)
   }
 }

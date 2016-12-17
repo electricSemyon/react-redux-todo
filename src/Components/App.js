@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import Container from './Container';
 import NoteCreator from './NoteCreator';
 
-import HashGenerator from './utils/HashGenerator'
+import generateHash from '../Utils/HashGenerator'
 
-import Store from './Store';
-
-const hashGenerator = new HashGenerator();
+import Store from '../Store/Store';
 
 class App extends Component {
   constructor(props) {
@@ -22,7 +20,7 @@ class App extends Component {
     return (
       <div>
         <NoteCreator onClick={(body) => 
-          Store.addNote(hashGenerator.make(), body)}/>
+          Store.addNote(generateHash(), body)}/>
         <Container className='container' notes={this.state.notes}/>
       </div>
     );

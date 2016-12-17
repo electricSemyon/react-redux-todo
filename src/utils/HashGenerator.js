@@ -1,13 +1,10 @@
-class HashGenerator {
-  make() {
-    let text = "";
-    let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+const generateHash = () => {
+  let text = "";
+  let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-    for(let i = 0; i < 5; i++)
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
+  for(let i = 0; i < 5; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
 
-    return text;
-  }
+  return text;
 }
-
-export default HashGenerator;
+export default generateHash;

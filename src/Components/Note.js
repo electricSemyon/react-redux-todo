@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Remarkable from 'remarkable';
 
-import Store from './Store';
+import Store from '../Store/Store';
 
 const md = new Remarkable();
 

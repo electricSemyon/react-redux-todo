@@ -4,10 +4,8 @@ const initialState = {
   notes: JSON.parse(localStorage.getItem('notes')) || []
 }
 
-const reducer = (store = initialState, action) => {
+const reducer = (store, action) => {
   switch(action.type) {
-    case 'INIT':
-      return store;
     case 'ADD_NOTE':
       return {
         ...store,
@@ -23,7 +21,7 @@ const reducer = (store = initialState, action) => {
   }
 }
 
-const store = createStore(reducer);
+const store = createStore(reducer, initialState);
 
 const addNote = (id, body) => {
   return store.dispatch({type: 'ADD_NOTE', payload: {id, body}});
@@ -39,15 +37,9 @@ const subscribe = (callback) => {
   });
 }
 
-const init = () => {
-  return store.dispatch({type: 'INIT'});
-}
-
 const getState = () => {
   return store.getState();
 }
-
-init();
 
 const Store = {
   addNote,
